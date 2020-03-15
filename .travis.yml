@@ -4,8 +4,5 @@ node_js:
     - '12'
     - '10'
 
-before_script:
-    - yarn add global nyc coveralls
-
-after_success:
-    - 'nyc report --reporter=text-lcov | coveralls'
+after_script:
+    - 'npx nyc report --reporter=text-lcov | npx coveralls'
